@@ -1,16 +1,16 @@
 using UnityEngine;
-using TMPro;   // <-- add this for TextMeshPro
+using TMPro;
 
 public class BackstabDetector : MonoBehaviour
 {
     public Transform enemy;
     public float range = 3f;
     public float behindThreshold = -0.7f;
-    public TMP_Text feedbackText;   // <-- changed from Text to TMP_Text
+    public TMP_Text feedbackText;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))   // left mouse button
         {
             TryBackstab();
         }
